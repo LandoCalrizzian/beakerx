@@ -1,0 +1,6 @@
+---
+# defaults file for beakerx
+APPLICATION_NAME: "{{ application_name | default('jupyter-beakerx') }}"
+NOTEBOOK_MEMORY: "{{ notebook_memory | default('2Gi') }}"
+NOTEBOOK_CPU: "{{ notebook_cpu | default('2') }}"
+VOLUME_SIZE: "{{ volume_size | default('2Gi') }}"

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beakerx-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: beakerx-operator
+  template:
+    metadata:
+      labels:
+        name: beakerx-operator
+    spec:
+      serviceAccountName: beakerx-operator
+      containers:
+        - name: beakerx-operator
+          image: "quay.io/llasmith/beakerx-operator:latest"
+          imagePullPolicy: "Always"
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "beakerx-operator"

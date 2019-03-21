@@ -1,0 +1,5 @@
+---
+- version: v1alpha1
+  group: beakerx.twosigma.com
+  kind: BeakerX
+  role: /opt/ansible/roles/beakerx

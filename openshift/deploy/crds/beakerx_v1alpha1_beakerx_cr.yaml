@@ -1,0 +1,9 @@
+apiVersion: beakerx.twosigma.com/v1alpha1
+kind: BeakerX
+metadata:
+  name: example-beakerx
+spec:
+  applicationName: "example-jupyter-beakerx"
+  NOTEBOOK_MEMORY: "4Gi"
+  NOTEBOOK_CPU: "4"
+  VOLUME_SIZE: "4Gi"

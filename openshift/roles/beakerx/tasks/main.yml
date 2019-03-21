@@ -1,0 +1,7 @@
+---
+- name: Create BeakerX running on Jupyter
+  k8s:
+    definition: "{{ lookup('template', item) }}"
+  with_items:
+  - jupyter.template.json.j2
+
