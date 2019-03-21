@@ -1,5 +1,7 @@
 ---
-# defaults file for beakerx
+# Create any ansible vars you want to use in the BeakerX tasks here
+# The only way to populate these via the BeakerX custom resource is to reference the properties in the custom resource .spec property
+#   Use the jinja filter 'default' as a fail safe if the user doesn't specify the value when creating the custom resource
 APPLICATION_NAME: "{{ application_name | default('jupyter-beakerx') }}"
 NOTEBOOK_MEMORY: "{{ notebook_memory | default('2Gi') }}"
 NOTEBOOK_CPU: "{{ notebook_cpu | default('2') }}"
