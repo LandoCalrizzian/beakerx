@@ -100,9 +100,10 @@
                 "source": {
                     "type": "Git",
                     "git": {
-                        "uri": "https://github.com/vpavlin/beakerx-jupyter-notebooks"
+                        "uri": "https://github.com/landocalrizzian/beakerx",
+                        "ref": "openshift-operator"
                     },
-                    "contextDir": "beakerx-minimal-notebook"
+                    "contextDir": "openshift/build/beakerx-minimal-notebook"
                 },
                 "strategy": {
                     "type": "Source",
