@@ -54,7 +54,7 @@
           "containers": [
             {
               "name": "notebook",
-              "image": "quay.io/odh-jupyterhub/s2i-beakerx-minimal-notebook",
+              "image": "s2i-beakerx-minimal-notebook",
               "ports": [
                 {
                   "containerPort": 8080,
@@ -94,8 +94,7 @@
     "metadata": {
       "name": "{{ APPLICATION_NAME }}-data",
       "namespace": "{{ meta.namespace }}",
-      "annotations": {
-      },
+      "annotations": {},
       "labels": {
         "app": "{{ APPLICATION_NAME }}"
       }

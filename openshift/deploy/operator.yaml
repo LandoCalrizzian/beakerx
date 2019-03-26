@@ -15,6 +15,7 @@ spec:
       serviceAccountName: beakerx-operator
       containers:
         - name: beakerx-operator
+          # Change the operator image to a repository controlled by Two Sigma
           image: "quay.io/llasmith/beakerx-operator:latest"
           imagePullPolicy: "Always"
           env:
