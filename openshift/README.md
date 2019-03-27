@@ -27,6 +27,8 @@ $ oc create -f beakerx_v1alpha1_beakerx_cr.yaml
 Directory
 ----------
 * build/ - Dockerfile used to build the operator image
+* build/beakerx-minimal-notebook - s2i files used to build the operator image
+* build/beakerx-minimal-notebook/beakerx-minimal-notebook.images.json - openshift buildconfigs and imagestreams used to create the jupyter image w/ beakerx extension
 * deploy/ - OpenShift templates for the CRD, RBAC and operator resources
 * roles/ - Ansible role used to deploy Jupyter w/ BeakerX
 * playbook.yml - Ansible playbook that manages that orchestrates the deployment of BeakerX within the namespace
