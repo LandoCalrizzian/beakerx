@@ -20,7 +20,7 @@ $ oc create -f deploy/operator.yaml
 ```
 
 ```bash
-# Deploy the BeakerX custom resources with configuration for your environment
+# Deploy the BeakerX custom resources with configurations for your environment
 $ oc create -f beakerx_v1alpha1_beakerx_cr.yaml
 ```
 

@@ -3,7 +3,9 @@ kind: BeakerX
 metadata:
   name: example-beakerx
 spec:
+  # Base name of the pod running Jupyter w/ the BeakerX extension
   applicationName: "example-jupyter-beakerx"
-  NOTEBOOK_MEMORY: "4Gi"
-  NOTEBOOK_CPU: "4"
-  VOLUME_SIZE: "4Gi"
+  # Jupyter pod resource limits
+  notebookMemory: "4Gi"
+  notebookCpu: "4"
+  volumeSize: "4Gi"
